@@ -1,0 +1,53 @@
+{
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "editor.formatOnSave": true,
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [88],
+  "editor.suggestSelection": "first",
+  "editor.stickyScroll.enabled": true,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 5000,
+  "files.exclude": {
+    "**/.git": false,
+    "**/.gitkeep": true,
+    "**/__pycache__": true,
+    ".mypy_cache": true,
+    ".pytest_cache": true
+  },
+  "files.trimTrailingWhitespace": true,
+  "flake8.args": ["--ignore=E203,W503,DAR003,DAR103,DAR402"],
+  "git.autofetch": true,
+  "mypy-type-checker.args": ["--no-strict-optional, --ignore-missing-imports"],
+  "python.analysis.autoImportCompletions": false,
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportMissingImports": "none"
+  },
+  "python.analysis.typeCheckingMode": "off",
+  "python.terminal.activateEnvironment": false,
+  "python.testing.cwd": "",
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.fontSize": 13,
+  "workbench.colorCustomizations": {
+    "editorRuler.foreground": "#808080",
+    "editorBracketHighlight.foreground1": "#bebebe",
+    "editorBracketHighlight.foreground2": "#227fa3",
+    "editorBracketHighlight.foreground3": "#9b3d96",
+    "editorBracketHighlight.foreground4": "#539733",
+    "editorBracketHighlight.foreground5": "#c8da2f"
+  },
+  "workbench.iconTheme": "material-icon-theme"
+}

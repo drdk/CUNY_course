@@ -1,0 +1,34 @@
+repos:
+  - repo: local
+    hooks:
+      - id: black
+        name: format checking (black)
+        entry: nox -s 'format checking' --
+        language: python
+        types_or: [python, pyi, jupyter]
+      - id: isort
+        name: import checking (isort)
+        entry: nox -s 'import checking' --
+        language: python
+        types_or: [python]
+      - id: flake8
+        name: lint checking (flake8)
+        entry: nox -s 'lint checking' --
+        language: python
+        types_or: [python]
+      - id: mypy
+        name: type checking (mypy)
+        entry: nox -s 'type checking' --
+        language: python
+        types_or: [python]
+      - id: safety
+        name: safety checking (safety)
+        entry: nox -s 'safety checking' --
+        language: python
+        types_or: [python]
+      - id: pytest
+        name: unit tests (pytest)
+        entry: nox -s 'unit tests'
+        pass_filenames: false
+        language: python
+        types_or: [python]

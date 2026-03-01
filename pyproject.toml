@@ -1,0 +1,87 @@
+[tool.poetry]
+name = "CUNY_course"
+version = "0.0.0"
+description = "Cuny_Course"
+authors = ["Lasse Funder Andersen <lass@dr.dk>"]
+maintainers = ["lass-dr"]
+readme = "README.md"
+homepage = "https://github.com/drdk/CUNY_course"
+repository = "https://github.com/drdk/CUNY_course"
+documentation = "https://drdk.github.io/CUNY_course/"
+packages = [
+    { include = "CUNY_course"},
+]
+classifiers = [
+    "Development Status :: 2 - Development",
+]
+
+[tool.poetry.urls]
+Changelog = "https://github.com/drdk/CUNY_course/releases"
+
+[tool.poetry.dependencies]
+python = "^3.9.0"
+click = ">=8.0.1"
+python-dotenv = "^1.0.1"
+openai = "^2.16.0"
+
+[tool.poetry.group.dev.dependencies]
+autoflake = "^2.3.1"
+black = {extras = ["jupyter"], version = "^24.3.0"}
+coverage = {extras = ["toml"], version = "^7.4.4"}
+darglint = "^1.8.1"
+flake8 = "^7.0.0"
+ipykernel = "^6.29.4"
+isort = "^5.13.2"
+jupyter = "^1.0.0"
+mypy = "^1.9.0"
+nox = "^2024.3.2"
+nox-poetry = "^1.0.3"
+safety = "^3.1.0"
+toml = "^0.10.2"
+packaging = "^24.2"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.1.1"
+pytest-cov = "^5.0.0"
+pytest-xdist = "^3.5.0"
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.5.3"
+mdx-include = "^1.4.2"
+mkdocs-coverage = "^1.0.0"
+mkdocs-material = "^9.5.17"
+mkdocs-print-site-plugin = "^2.3.6"
+mkdocstrings-python = "^1.9.2"
+pygments = "^2.17.2"
+pymdown-extensions = "^10.7.1"
+
+[tool.poetry.scripts]
+CUNY_course = "CUNY_course.__main__:main"
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+tests = ["tests", "*/tests"]
+
+[tool.coverage.run]
+branch = true
+source = ["CUNY_course", "tests"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 100
+
+[tool.isort]
+profile = "black"
+force_single_line = false
+lines_after_imports = 2
+
+[tool.mypy]
+strict = true
+warn_unreachable = true
+pretty = true
+show_column_numbers = true
+show_error_context = true
+
+[build-system]
+requires = ["poetry-core>=1.8.0"]
+build-backend = "poetry.core.masonry.api"

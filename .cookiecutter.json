@@ -1,0 +1,15 @@
+{
+    "_checkout": "v0.0.12",
+    "_output_dir": "/Users/lass/KODE",
+    "_project_name_comment": "Enter the name of the project. Make sure the name is available at github.",
+    "_repo_dir": "/Users/lass/.cookiecutters/cookiecutter-nyheder-ai",
+    "_template": "gh:drdk/cookiecutter-nyheder-ai",
+    "author": "Lasse Funder Andersen",
+    "description": "Cuny_Course",
+    "development_status": "Development Status :: 2 - Development",
+    "github_user_name": "lass-dr",
+    "initials": "lass",
+    "package_name": "CUNY_course",
+    "project_name": "CUNY_course",
+    "version": "0.0.0"
+}
