@@ -1,6 +1,8 @@
+# delete just one comma, and see what happens...
+
 person = {
     "name": "Lasse",
-    "age : 38,
+    "age": 38,
     "city": "Copenhagen",
     "is_data_scientist": True,
     "skills": ["Python", "MongoDB", "RAG", "LLMs"],

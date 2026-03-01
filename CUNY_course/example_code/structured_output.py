@@ -1,7 +1,7 @@
 from dotenv import load_dotenv
 import os
-from openai import AzureOpenAI
-from pydantic import BaseModel, Field
+from openai import AzureOpenAI  # or just OpenAI if you are using the OpenAI API
+from pydantic import BaseModel
 from CUNY_course.data_types.person import (
     Person,
     Address,
@@ -47,8 +47,8 @@ to Susanne on my third year. She is a wonderful person, but also a little boring
 have found myself a secret lover - A young 25 old beauty.
 I have also been married twice before.
 My first marriage lasted for 10 years, when sadly my wife Mary passed away. I was
-devastated, but I eventually moved on and found love again in a feisty opera singer
-called Anna - but it ended in a bitter divorce."""
+devastated, but I eventually moved on and found love again in woman from New York -
+but it ended in a bitter divorce."""
 
 instructions = """Extract information about a person from the input text
 and structure it according to the Person data model."""
