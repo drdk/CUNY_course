@@ -56,6 +56,6 @@ and structure it according to the Person data model."""
 person_info = generate_structured_output(
     instructions=instructions,
     input=text3,
-    output_model=PersonWithRelationships,
+    output_model=Person2,
 )
 print(person_info.model_dump_json(indent=2, exclude_none=True))
