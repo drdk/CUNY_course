@@ -1,4 +1,5 @@
 import os
+import socket
 import textwrap
 from functools import lru_cache
 from typing import List, Tuple
@@ -205,4 +206,8 @@ with gr.Blocks(title="Yosemite RAG Demo") as demo:
 
 
 if __name__ == "__main__":
-    demo.launch(server_name="0.0.0.0", server_port=int(os.getenv("PORT", "7860")))
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+        sock.bind(("0.0.0.0", 0))
+        free_port = sock.getsockname()[1]
+
+    demo.launch(server_name="0.0.0.0", server_port=free_port)
